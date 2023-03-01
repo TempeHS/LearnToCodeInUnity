@@ -494,20 +494,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1970498075}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76f473c4d6a915948838864a9d74fa80, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f173cb34b3e7ee43a44286f48843bee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerName: Mr Jones
-  MrJonesInt: 1
-  MrJonesBooleen: 0
-  MrjonesFloat: 0.001
-  MrJonesDouble: 1e-18
-  MrJones: 99
-  IntOne: 1
-  IntTwo: 2
-  FloatOne: 1
-  StringOne: 'The Answer is: '
-  StringTwo: ???
   ComputerFeedbackObject: {fileID: 1562664350}
 --- !u!1 &2089095132
 GameObject:

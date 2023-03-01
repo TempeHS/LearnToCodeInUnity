@@ -25,55 +25,62 @@ public class LearnVariables : MonoBehaviour
     private bool BoolOne = false;
     */
 
-    public float FloatOutput = 1.0f;
-    public int IsItAPrimeNumber = 7;
+    private float FloatOutput;
+    private float IsItAPrimeNumber = 7919;
+    private string OutputString = "IT IS A PRIME NUMBER";
 
     public TextMeshProUGUI ComputerFeedbackObject;
 
     void Update()
     {
+        FloatOutput = IsItAPrimeNumber / 3;
+        Debug.Log(FloatOutput.ToString("F4"));
+
+        
         // IF number / number == 1
         if (IsItAPrimeNumber / IsItAPrimeNumber == 1)
         {
-            ComputerFeedbackObject.text = "1. It could be a prime number";
+            ComputerFeedbackObject.text = OutputString;
             // IF number / 1 == number
             if (IsItAPrimeNumber / 1 == IsItAPrimeNumber)
             {
-                ComputerFeedbackObject.text = "2. It could be a prime number";
+                ComputerFeedbackObject.text = OutputString;
 
                 // LOOP number / x == isINT
-                for (int LoopCounter = 2; LoopCounter <= IsItAPrimeNumber - 1 ; LoopCounter = LoopCounter + 1)
+                for (int LoopCounter = 2; LoopCounter <= IsItAPrimeNumber - 1; LoopCounter = LoopCounter + 1)
                 {
-                    ComputerFeedbackObject.text = "3. It could be a prime number";
+                    ComputerFeedbackObject.text = OutputString;
                     FloatOutput = IsItAPrimeNumber / LoopCounter;
-                    Debug.Log(FloatOutput.ToString());
-                    for (int InnerLoopCounter = 2; InnerLoopCounter <= IsItAPrimeNumber - 1; InnerLoopCounter = InnerLoopCounter + 1)
+                    Debug.Log(FloatOutput.ToString("F4"));
+                    for (int InnerLoopCounter = 2; InnerLoopCounter <= IsItAPrimeNumber -1; InnerLoopCounter = InnerLoopCounter + 1)
                     {
                         if (FloatOutput == InnerLoopCounter)
                         {
-                            ComputerFeedbackObject.text = "IT's NOT a prime number";
+                            OutputString = "IT IS NOT A PRIME NUMBER";
+                            ComputerFeedbackObject.text = OutputString;
                         }
                         else
                         {
-                            ComputerFeedbackObject.text = "IT IS A PRIME NUMBER";
+                            ComputerFeedbackObject.text = OutputString;
                         }
+
                     }
                 }
 
             }
             else
             {
-                ComputerFeedbackObject.text = "IT's NOT a prime number";
             }
 
         }
         // ELSE
-        // OUTPUT "IT's NOT a prime number"
+
         else
         {
-            ComputerFeedbackObject.text = "IT's NOT a prime number";
+
         }
     }
+
 }
 
 

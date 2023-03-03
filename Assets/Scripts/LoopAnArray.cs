@@ -8,26 +8,11 @@ using TMPro;
 public class LoopAnArray : MonoBehaviour
 {
 
-    private string[] MyAnimals = { "cat", "dog", "snake" };
+    private string[] MyAnimals = { "cat", "dog", "snake", "pig" };
 
     public TextMeshProUGUI OutputObject;
 
-    public GameObject[] ColoredSpheres;
-    private Color[] ColorArray = { Color.red, Color.blue, Color.green, Color.yellow};
-
-    void Update ()
-    {
-        for (int SphereIndex = 0; SphereIndex < ColoredSpheres.Length; SphereIndex++)
-        {
-            int RandomColor = Random.Range(0, ColoredSpheres.Length);
-            ColoredSpheres[SphereIndex].GetComponent<MeshRenderer>().material.color = ColorArray[RandomColor];
-        }
-    }
-    
-    
-    
-    
-    /* void Update()
+   void Update()
     {
         string OutputString = "";
 
@@ -38,6 +23,6 @@ public class LoopAnArray : MonoBehaviour
 
         OutputObject.text = OutputString;
 
-    } */
+    }
 
 }

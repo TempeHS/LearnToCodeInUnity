@@ -30,5 +30,10 @@ public class LearnVariables : MonoBehaviour
     {
         Debug.Log(FloatOne.ToString("F4"));
         ComputerFeedbackObject.text = StringOne;
+
+        if(BoolOne)
+        {
+            IntMath = IntMath + 1;
+        }
     }
 }

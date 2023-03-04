@@ -19,23 +19,27 @@ public class GameLoopScript : MonoBehaviour
     public TextMeshProUGUI ComputerScoreObject;
     public TextMeshProUGUI ComputerFeedbackObject;
     public TMP_InputField PlayerInputObject;
-    public GameObject PlayerButton;
 
     void Start ()
     {
         ComputerFeedbackObject.text = "Enter your name to begin";
-        PlayerButton.SetActive(false);
     }
 
     public void EnterPlayerName (string s)
     {
-       if (!GamePlaying && PlayerGuess != "0")
+       
+        if (!GamePlaying && PlayerGuess != "0")
        {
             PlayerName = s;
             Debug.Log(PlayerName);
-            ComputerFeedbackObject.text = "Hi " + s;
+            ComputerFeedbackObject.text = "Hi " + s + "\n" + "Rock Paper or Scissors?";
             GamePlaying = true;
        }
+
+        if (s == "Rock")
+        {
+            ComputerFeedbackObject.text = "Rock";
+        }
     }
 
 }

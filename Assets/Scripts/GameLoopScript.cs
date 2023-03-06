@@ -8,9 +8,9 @@ public class GameLoopScript : MonoBehaviour
 {
     public string PlayerGuess;
     public string PlayerName;
-    private int ComputerGuess;
-    private int PlayerScore;
-    private int ComputerScore;
+    private float ComputerGuess;
+    private int PlayerScore = 0;
+    private int ComputerScore = 0;
     private bool GamePlaying = false;
     private int RoundsPlayed;
     private int GuessesMade;
@@ -26,6 +26,7 @@ public class GameLoopScript : MonoBehaviour
     }
 
     public void EnterPlayerName (string s)
+
     {
        
         if (!GamePlaying && PlayerGuess != "0")
@@ -34,12 +35,48 @@ public class GameLoopScript : MonoBehaviour
             Debug.Log(PlayerName);
             ComputerFeedbackObject.text = "Hi " + s + "\n" + "Rock Paper or Scissors?";
             GamePlaying = true;
+            RandomGenerator();  //2
        }
 
-        if (s == "Rock")
+
+        // 0 = rock, 1 = paper, 2 = scissors
+        if (s == "Rock" || s == "rock")
         {
-            ComputerFeedbackObject.text = "Rock";
+            if (ComputerGuess == 0)
+            {
+                PlayerScore = PlayerScore;
+                ComputerScore = ComputerScore;
+            } else if (ComputerGuess == 1) 
+            {
+                PlayerScore = PlayerScore;
+                ComputerScore++;
+            } else if (ComputerGuess == 2)
+            {
+                PlayerScore++;
+                ComputerScore = ComputerScore;
+            }
+
+        } else if (s == "paper" || s == "Paper")
+        {
+            
+
+        } else if (s == "Scissor" || s == "scissor")
+        {
+            
+
+
+        } else
+        {
+            ComputerFeedbackObject.text = "Please enter Rock, Paper or Scissors correctly";
         }
+
+        PlayerScoreObject.text = "Player: " + PlayerScore.ToString();
+        ComputerScoreObject.text = "Computer: " + ComputerScore.ToString();
+    }
+
+    private void RandomGenerator()
+    {
+        ComputerGuess = Random.Range(0, 2);
     }
 
 }

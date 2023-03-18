@@ -23,9 +23,17 @@ public class ArrayAdvanced : MonoBehaviour
         //SortAndSearchArray();
         //ArrayClassProperties();
 
+/* 
+Once you have come to terms with the above:
+1. Find the index of the lowest number in an array
+2. Find the index of the highest in an array
+3. Manually sort an array of integers
+4. Manually sort an array of strings
+*/
+
     }
 
-    // NOTE: Region tages are to make code more manageable (so you can expand and contract regions)
+    // NOTE: Region tags are to make code more manageable (so you can expand and contract regions)
     // they are treated as comments and ignored by the program
 
     #region Sort and Search Array

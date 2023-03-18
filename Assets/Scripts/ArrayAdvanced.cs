@@ -121,12 +121,7 @@ public class ArrayAdvanced : MonoBehaviour
 
     private void ClearArray()
     {
-        string[] stringArray = new string [5];
-        stringArray.SetValue("Mahesh", 0);
-        stringArray.SetValue("Raj", 1);
-        stringArray.SetValue("Neel", 2);
-        stringArray.SetValue("Beniwal", 3);
-        stringArray.SetValue("Chand", 4);
+        string[] stringArray = { "Mahesh", "Raj", "Neel", "Beniwal", "Chand" };
         Debug.Log("Original Array");
         Debug.Log("---------------------");
         foreach (string str in stringArray)
@@ -156,12 +151,7 @@ public class ArrayAdvanced : MonoBehaviour
     private void ReverseArray()
     {
         // Create an array and add 5 items to it
-        string[] stringArray = new string[5];
-        stringArray.SetValue("Mahesh", 0);
-        stringArray.SetValue("Raj", 1);
-        stringArray.SetValue("Neel", 2);
-        stringArray.SetValue("Beniwal", 3);
-        stringArray.SetValue("Chand", 4);
+        string[] stringArray = { "Mahesh", "Raj", "Neel", "Beniwal", "Chand" };
 
         Debug.Log("Original stringArray");
         Debug.Log("---------------------");

@@ -44,16 +44,14 @@ public class GameLoopScript : MonoBehaviour
         {
             if (ComputerGuess == 0)
             {
-                PlayerScore = PlayerScore;
-                ComputerScore = ComputerScore;
+
             } else if (ComputerGuess == 1) 
             {
-                PlayerScore = PlayerScore;
                 ComputerScore++;
             } else if (ComputerGuess == 2)
             {
                 PlayerScore++;
-                ComputerScore = ComputerScore;
+
             }
 
         } else if (s == "paper" || s == "Paper")

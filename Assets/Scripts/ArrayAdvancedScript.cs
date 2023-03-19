@@ -79,13 +79,15 @@ Once you have come to terms with the above:
 
     private void ArrayClassProperties()
         {
-            int[] intArray = new int[3] { 0, 1, 2 };
+            int[] intArray = new int[3] { 1, 3, 5 };
             if (intArray.IsFixedSize)
             {
                 Debug.Log("Array is fixed size");
                 Debug.Log("Size :" + intArray.Length.ToString());
                 Debug.Log("Rank :" + intArray.Rank.ToString());
-            }
+                Debug.Log("Lower Bound :" + intArray.GetLowerBound(0).ToString());
+                Debug.Log("Upper Bound :" + intArray.GetUpperBound(0).ToString());
+        }
 
     }
     #endregion

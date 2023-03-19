@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 
 
-public class DoWhileandWhile : MonoBehaviour
+public class DoWhileandWhileScript : MonoBehaviour
 {
 
     private int GameOver = 1;

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class GameLoopScript : MonoBehaviour
+public class RockPaperScissorsScript : MonoBehaviour
 {
     public string PlayerGuess;
     public string PlayerName;

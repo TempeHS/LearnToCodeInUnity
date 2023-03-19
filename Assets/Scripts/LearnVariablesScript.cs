@@ -7,7 +7,7 @@ using TMPro;
 
 //Note addition of 'using System;' for datatype conversion methods
 
-public class LearnVariables : MonoBehaviour
+public class LearnVariablesScript : MonoBehaviour
 {
     //Types of Variables
     public string PlayerName = "Mr Jones";

@@ -5,17 +5,18 @@ using UnityEngine;
 
 //Note addition of 'using System;' for datatype conversion methods if you need them
 
-public class BasicComputatiionScript : MonoBehaviour
+public class LogicScript : MonoBehaviour
 {
-    private float NumberOne = 1.0f;
-    private float NumberTwo = 2.0f;
-    private float NumberThree = 3.0f;
-    private float ComputationResult;
-
-    //https://www.programiz.com/csharp-programming/operators
+    private int NumberOne = 1;
+    private int NumberTwo = 63;
+    private bool ThisBool = false;
 
     void Start()
     {
+        if (ThisBool)
+        {
+            NumberOne = NumberTwo;
+        }
         //ALL FUNCTIONS PRINT TO THE CONSOLE
         /* 
         +	Addition Operator	6 + 3 evaluates to 9
@@ -27,12 +28,7 @@ public class BasicComputatiionScript : MonoBehaviour
 
         Debug.Log("Default order of operations computation");
         Debug.Log("---------------------");
-        ComputationResult = NumberOne * NumberTwo + NumberThree;
-        Debug.Log(ComputationResult);
-        Debug.Log("Order of operations computation controlled by parenthathese");
-        Debug.Log("---------------------");
-        ComputationResult = NumberOne * (NumberTwo + NumberThree);
-        Debug.Log(ComputationResult);
+
 
     }
 

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 
 
-public class LoopAnArray : MonoBehaviour
+public class LoopAnArrayScript : MonoBehaviour
 {
 
     private string[] MyAnimals = { "cat", "dog", "snake", "pig" };

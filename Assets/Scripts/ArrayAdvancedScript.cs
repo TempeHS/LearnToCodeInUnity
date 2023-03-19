@@ -7,7 +7,7 @@ using TMPro;
 
 //Note addition of 'using System;' for array methods
 
-public class ArrayAdvanced : MonoBehaviour
+public class ArrayAdvancedScript : MonoBehaviour
 {
     void Start()
     {

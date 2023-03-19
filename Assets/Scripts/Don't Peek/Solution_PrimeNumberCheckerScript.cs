@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 
 
-public class PrimeNumberChecker : MonoBehaviour
+public class Solution_PrimeNumberCheckerScript: MonoBehaviour
 {
     private float FloatOutput;
     private float IsItAPrimeNumber = 7919;
@@ -16,8 +16,6 @@ public class PrimeNumberChecker : MonoBehaviour
     void Update()
     {
         FloatOutput = IsItAPrimeNumber / 3;
-        Debug.Log(FloatOutput.ToString("F4"));
-
         
         // IF number / number == 1
         if (IsItAPrimeNumber / IsItAPrimeNumber == 1)
@@ -33,7 +31,6 @@ public class PrimeNumberChecker : MonoBehaviour
                 {
                     ComputerFeedbackObject.text = OutputString;
                     FloatOutput = IsItAPrimeNumber / LoopCounter;
-                    Debug.Log(FloatOutput.ToString("F4"));
 
                     // LOOP number / x == isINT
                     for (int InnerLoopCounter = 2; InnerLoopCounter <= IsItAPrimeNumber -1; InnerLoopCounter = InnerLoopCounter + 1)

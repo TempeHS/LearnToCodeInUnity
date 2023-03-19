@@ -1,39 +1,53 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//Note addition of 'using System;' for datatype conversion methods
 
 public class LearnVariables : MonoBehaviour
 {
     //Types of Variables
     public string PlayerName = "Mr Jones";
-    public int MrJonesInt = 1;
-    public bool MrJonesBooleen = false;
-    public float MrjonesFloat = 0.001f;
-    public double MrJonesDouble = 0.000000000000000001;
-    public char MrJones = 'c'; 
-
-    // Basic Maths
-    public int IntOne = 1;
-    public int IntTwo = 2;
-    public float FloatOne = 1.0f;
-    private int IntMath = 0;
-    public string StringOne = "The Answer is: ";
-    public string StringTwo = "???";
-    private bool BoolOne = false;
+    private int PlayerScore = 1;
+    private bool IsPlayerDead = false;
+    private float Playerhealth = 3.14f;
+    private double MrJonesDouble = 0.000000000000000001;
+    private char KeyPressed = 'c'; 
 
     public TextMeshProUGUI ComputerFeedbackObject;
 
+    /*
+    Data conversion methods
+    ToBoolean()	converts a type to a Boolean value
+    ToChar()	converts a type to a char type
+    ToDouble()	converts a type to a double type
+    ToInt()	converts a type to a 16-bit int type
+    ToString()	converts a type to a string
+    You should understand the limitaions and rules of conversion
+    */
+
+    void Start()
+    {
+        Debug.Log(PlayerName);
+        Debug.Log(PlayerScore);
+        Debug.Log(IsPlayerDead);
+        Debug.Log(Playerhealth);
+        Debug.Log(MrJonesDouble);
+        Debug.Log(KeyPressed);
+        Debug.Log("Convert Datatypes");
+        Debug.Log("---------------------");
+        Debug.Log("float to string: " + Playerhealth.ToString() + "- proof is :" + Playerhealth.ToString() + 1 + " does not compute but concatenates");
+        Debug.Log("char to int: " + Convert.ToInt16(KeyPressed)); //Look at ASCII Table to understand
+        Debug.Log("boolean to int: " + Convert.ToInt16(IsPlayerDead));
+        Debug.Log("float to int: " + Convert.ToInt16(Playerhealth));
+    }
+
     void Update()
     {
-        Debug.Log(FloatOne.ToString("F4"));
-        ComputerFeedbackObject.text = StringOne;
-
-        if(BoolOne)
-        {
-            IntMath = IntMath + 1;
-        }
+        ComputerFeedbackObject.text = "Hello " + PlayerName;
+        //add the players score to this output. tip: think about what the output data type is
     }
 }

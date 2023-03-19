@@ -1,9 +1,11 @@
-using System; //needed if working with arrays
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+
+//Note addition of 'using System;' for array methods
 
 public class ArrayAdvanced : MonoBehaviour
 {

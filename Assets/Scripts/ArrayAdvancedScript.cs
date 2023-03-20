@@ -10,6 +10,8 @@ using TMPro;
 public class ArrayAdvancedScript : MonoBehaviour
 {
     void Start()
+
+
     {
 
         // UNCOMMENT THE FUNCTION YOU WANT TO RUN
@@ -231,7 +233,7 @@ public class ArrayAdvancedScript : MonoBehaviour
         // Initialize a fixed array and assign data to all index's at once
         int[] QuickStaticIntArray = new int[3] { 1, 3, 5 };
 
-        // Initialize a dynamic array items during declaration 
+        // Initialize a fixed array and assign items during declaration 
         string[] strArray = new string[] { "Mahesh Chand", "Mike Gold", "Raj Beniwal", "Praveen Kumar", "Dinesh Beniwal", "Ben Jones" };
 
         // Read array items using foreach loop

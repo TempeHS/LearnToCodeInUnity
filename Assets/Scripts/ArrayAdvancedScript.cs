@@ -12,7 +12,6 @@ public class ArrayAdvancedScript : MonoBehaviour
     void Start()
     {
 
-
         // UNCOMMENT THE FUNCTION YOU WANT TO RUN
         // ALL FUNCTIONS PRINT TO THE CONSOLE
 
@@ -25,13 +24,13 @@ public class ArrayAdvancedScript : MonoBehaviour
         //SortAndSearchArray();
         //ArrayClassProperties();
 
-/* 
-Once you have come to terms with the above:
-1. Find the index of the lowest number in an array
-2. Find the index of the highest in an array
-3. Manually sort an array of integers
-4. Manually sort an array of strings
-*/
+        /* 
+        Once you have come to terms with the above:
+        1. Find the index of the lowest number in an array
+        2. Find the index of the highest in an array
+        3. Manually sort an array of integers
+        4. Manually sort an array of strings
+        */
 
     }
 
@@ -79,6 +78,7 @@ Once you have come to terms with the above:
 
     private void ArrayClassProperties()
         {
+            //Note the 'new int[3] is what fixes the array size/length
             int[] intArray = new int[3] { 1, 3, 5 };
             if (intArray.IsFixedSize)
             {
@@ -113,7 +113,8 @@ Once you have come to terms with the above:
         }
 
         // Mannually Clone An Array Using ForLoop
-        string[] clonedArrayLoop = new string[stringArray.Length]; ;
+        // We used the 'new string[stringArray.Length]' declaration so the new array is initialised with a fixed size/length as the stringArray
+        string[] clonedArrayLoop = new string[stringArray.Length];
         for (int i = 0; i < stringArray.Length; i++ )
         {
             clonedArrayLoop[i] = stringArray[i];
@@ -141,7 +142,6 @@ Once you have come to terms with the above:
             Debug.Log(str);
         }
 
-        Debug.Log(" ");
         Debug.Log("Clear Items");
         Debug.Log("---------------------");
         Array.Clear(stringArray, 1, 2);
@@ -150,11 +150,6 @@ Once you have come to terms with the above:
         {
             Debug.Log(str);
         }
-
-        Debug.Log(stringArray.GetLength(0).ToString());
-        Debug.Log(stringArray.GetLowerBound(0).ToString());
-        Debug.Log(stringArray.GetUpperBound(0).ToString());
-
     }
     #endregion
 
@@ -173,7 +168,6 @@ Once you have come to terms with the above:
         }
 
         // Reverse the array using the Array.Reverse method
-        Debug.Log(" ");
         Debug.Log("Reversed stringArray");
         Debug.Log("---------------------");
         Array.Reverse(stringArray);
@@ -186,6 +180,7 @@ Once you have come to terms with the above:
         Debug.Log(" ");
         Debug.Log("Manually Reversed stringArray After Manually Cloning");
         Debug.Log("---------------------");
+        // We used the 'new string[stringArray.Length]' declaration so the new array is initialised with a fixed size/length as the stringArray
         string[] clonedArray = new string[stringArray.Length]; ;
         for (int i = 0; i < clonedArray.Length; i++)
         {
@@ -211,17 +206,17 @@ Once you have come to terms with the above:
 
     private void SingleDimensionalArray()
     {
+        //Create an int array, then initialise it with 100 index's
         int[] intArray;
         intArray = new int[100];
+
+        //Create different arrays and initialise them with a fixed size/length in the same line (shorthand of above)
         double[] doubleArray = new double[5];
         char[] charArray = new char[5];
         bool[] boolArray = new bool[2];
         string[] stringArray = new string[10];
 
-        // Initialize a fixed array 
-        // int[] staticIntArray = new int[3] {1, 3, 5};
-
-        // Initialize a fixed array one item at a time
+        // Initialize a fixed array then assign data one item at a time
         int[] staticIntArray = new int[3];
 
         staticIntArray[0] = 1;
@@ -233,8 +228,11 @@ Once you have come to terms with the above:
         Debug.Log(staticIntArray[1]);
         Debug.Log(staticIntArray[2]);
 
+        // Initialize a fixed array and assign data to all index's at once
+        int[] QuickStaticIntArray = new int[3] { 1, 3, 5 };
+
         // Initialize a dynamic array items during declaration 
-        string[] strArray = new string[] { "Mahesh Chand", "Mike Gold", "Raj Beniwal", "Praveen Kumar", "Dinesh Beniwal" };
+        string[] strArray = new string[] { "Mahesh Chand", "Mike Gold", "Raj Beniwal", "Praveen Kumar", "Dinesh Beniwal", "Ben Jones" };
 
         // Read array items using foreach loop
         foreach (string str in strArray)
@@ -249,26 +247,16 @@ Once you have come to terms with the above:
     private void MultiDimensionalArray()
     {
         Debug.Log("Multidimensional arrays");
-        //string[,] mutliDimStringArray;
 
-        int[,] numbers = new int[3, 2];
-        numbers[0, 0] = 1;
-        numbers[1, 0] = 2;
-        numbers[2, 0] = 3;
-        numbers[0, 1] = 4;
-        numbers[1, 1] = 5;
-        numbers[2, 1] = 6;
+        int[,] MyNumbers = { { 1, 2 }, { 3, 4 }, { 5, 6 } };
 
-        // int[,] numbers = new int[3, 2] { { 1, 2 }, { 3, 4 }, { 5, 6 } };
+        Debug.Log(MyNumbers[0, 0]);
+        Debug.Log(MyNumbers[1, 0]);
+        Debug.Log(MyNumbers[2, 0]);
+        Debug.Log(MyNumbers[0, 1]);
+        Debug.Log(MyNumbers[1, 1]);
+        Debug.Log(MyNumbers[2, 1]);
 
-        // int[,] numbers = { { 1, 2 }, { 3, 4 }, { 5, 6 } };
-
-        Debug.Log(numbers[0, 0]);
-        Debug.Log(numbers[1, 0]);
-        Debug.Log(numbers[2, 0]);
-        Debug.Log(numbers[0, 1]);
-        Debug.Log(numbers[1, 1]);
-        Debug.Log(numbers[2, 1]);
     }
     #endregion
 

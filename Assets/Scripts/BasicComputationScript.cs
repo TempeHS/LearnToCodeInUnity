@@ -7,10 +7,10 @@ using UnityEngine;
 
 public class BasicComputationScript : MonoBehaviour
 {
-    private float NumberOne = 2.0f;
-    private float NumberTwo = 3.0f;
-    private float NumberThree = 5.0f;
-    private float ComputationResult;
+    float NumberOne = 2.0f;
+    float NumberTwo = 3.0f;
+    float NumberThree = 5.0f;
+    float ComputationResult;
 
     //https://www.programiz.com/csharp-programming/operators
 

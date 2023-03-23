@@ -40,6 +40,8 @@ public class LogicScript : MonoBehaviour
         Try Multipel Logic
             && And
             || Or
+
+        Learn more about Break and Continue to control logic further: https://www.w3schools.com/cs/cs_break.php
         */
 
         Debug.Log("Data Logic");

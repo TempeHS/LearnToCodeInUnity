@@ -11,11 +11,11 @@ public class HelloWorldScript : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("");
+        Debug.Log("Helo World");
     }
 
     void Update()
     {
-        ComputerFeedbackObject.text = "";
+        ComputerFeedbackObject.text = "Goodbye World";
     }
 }

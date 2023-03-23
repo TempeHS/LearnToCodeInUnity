@@ -16,10 +16,10 @@ public class IncAndDecNumbersScript : MonoBehaviour
     {
         //ALL FUNCTIONS PRINT TO THE CONSOLE
         /* 
-        myInt += 1;
-        myInt -= 1;
-        myInt *= 1;
-        myFloat /= 1;
+        myInt += 3;
+        myInt -= 3;
+        myInt *= 3;
+        myFloat /= 3;
         myInt++;
         myInt--;
         */

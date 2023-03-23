@@ -8,11 +8,11 @@ using TMPro;
 public class LoopAnArrayScript : MonoBehaviour
 {
 
-    private string[] MyAnimals = { "cat", "dog", "snake", "pig" };
+    string[] MyAnimals = { "cat", "dog", "snake", "pig" };
 
     public TextMeshProUGUI OutputObject;
 
-   void Update()
+    void Update()
     {
         string OutputString = "";
 

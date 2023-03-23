@@ -10,12 +10,12 @@ using TMPro;
 public class LearnVariablesScript : MonoBehaviour
 {
     //Types of Variables
-    public string PlayerName = "Mr Jones";
-    private int PlayerScore = 1;
-    private bool IsPlayerDead = false;
-    private float Playerhealth = 3.14f;
-    private double MrJonesDouble = 0.000000000000000001;
-    private char KeyPressed = 'c'; 
+    string PlayerName = "Mr Jones";
+    int PlayerScore = 1;
+    bool IsPlayerDead = false;
+    float Playerhealth = 3.14f;
+    double MrJonesDouble = 0.000000000000000001;
+    char KeyPressed = 'c'; 
 
     public TextMeshProUGUI ComputerFeedbackObject;
 

@@ -5,11 +5,11 @@ using UnityEngine;
 
 //Note addition of 'using System;' for datatype conversion methods if you need them
 
-public class BasicComputatiionScript : MonoBehaviour
+public class BasicComputationScript : MonoBehaviour
 {
-    private float NumberOne = 1.0f;
-    private float NumberTwo = 2.0f;
-    private float NumberThree = 3.0f;
+    private float NumberOne = 2.0f;
+    private float NumberTwo = 3.0f;
+    private float NumberThree = 5.0f;
     private float ComputationResult;
 
     //https://www.programiz.com/csharp-programming/operators
@@ -45,16 +45,6 @@ public class BasicComputatiionScript : MonoBehaviour
 
     /* Generate a random number
     int RandomNumber = Random.Range(0, 2); //generates a random number betwene 1 and 2
-    /*
-
-
-Once you have come to terms with the above:
-1. Find the index of the lowest number in an array
-2. Find the index of the highest in an array
-3. Manually sort an array of integers
-4. Manually sort an array of strings
-*/
-
-
+    */
 
 }
